@@ -25,6 +25,7 @@ the correct phrase in the URL:
           COPY index.html /usr/share/nginx/html
 
    Also to build a docker image I simply went to y wsl and typed down:
+   
          sudo docker build -t nginx
 
 5. to run the container which I named CobraComicsWebSite, I type down the following code:
