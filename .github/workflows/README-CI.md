@@ -26,7 +26,7 @@ the correct phrase in the URL:
 
    Also to build a docker image I simply went to my wsl and typed down:
    
-         sudo docker build -t hulkman125/cobr/finalFile . // 
+         sudo docker build -t hulkman125/ceg3120-Harvey/Project-4/finalFile . // used from my hulkman125/ceg3120-Harvey repo.
 
 5. to run the container which I named CobraComicsWebSite, I type down the following code:
 
