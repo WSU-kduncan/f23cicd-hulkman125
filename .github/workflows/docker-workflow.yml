@@ -33,6 +33,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: .github/workflows/Dockerfile
+          file: Project-4and5/website/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/repo4cobra:latest
