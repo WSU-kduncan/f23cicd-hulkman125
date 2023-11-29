@@ -55,7 +55,7 @@ I then chose an appropriate name for my repository, mine is called "repo4cobra".
 
 
 
-3. I used the latest nginx image by typing down:
+3. I tagged using the image I build using my dockerfile:
 
           docker tag nginx:latest cobraking1/repo4cobra:latest
 
