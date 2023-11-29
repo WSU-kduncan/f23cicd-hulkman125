@@ -56,6 +56,7 @@ I then chose an appropriate name for my repository, mine is called "repo4cobra".
 
 
 3. I tagged using the image I build using my dockerfile:
+   
           docker tag cobraking1/repo4cobra:latest
           
    to create a new image container called "dockerking1/repo4cobra" to my Docker software on my PC.
