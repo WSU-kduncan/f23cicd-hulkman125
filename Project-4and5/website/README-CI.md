@@ -64,6 +64,9 @@ I then chose an appropriate name for my repository, mine is called "repo4cobra".
    
           docker push cobraking1/repo4cobra:latest
 
+4. The following link is the link to my dockerhub reposiroty:
+   https://hub.docker.com/repository/docker/cobraking1/repo4cobra/general
+
 5. to set a secret on Github, go to settings/Secrets and variables/Actions then click on the "New repository secret" button.  I chose my secrets as Docker_Password to store my Dockerhub password, Docker_Username to store my Dockerhub username, and Docker_Token to set my Dockerhub access token.
 
 6. This workflow named docker-workflow.ym,l uses my github secrets named DOCKER_USERNAME and DOCKER_TOKEN and uses it to access my dockerhub account and pushes my image nginx from this folder into dockerhub inside my image/reponame of cobraking1/repo4cobra.
@@ -81,5 +84,4 @@ the fifth step docker/setup-buildx-action@v3 which creates and boot a builder th
 the sixth and final step uses the docker/build-push-action@v5 command which is used to build and push any images to your dockerhub account.
 
 
-Also the following link is the link to my dockerhub reposiroty:
-   https://hub.docker.com/repository/docker/cobraking1/repo4cobra/general
+
