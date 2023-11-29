@@ -56,20 +56,20 @@ I then chose an appropriate name for my repository, mine is called "repo4cobra".
 
 
 3. I tagged using the image I build using my dockerfile:
-
-          docker tag nginx:latest cobraking1/repo4cobra:latest
-
+          docker tag cobraking1/repo4cobra:latest
+          
    to create a new image container called "dockerking1/repo4cobra" to my Docker software on my PC.
    I then pushed my new container by typing down:
    
-          docker push cobraking1/repo4cobra:latest
 
-4. The following link is the link to my dockerhub reposiroty:
+      docker push cobraking1/repo4cobra:latest
+
+5. The following link is the link to my dockerhub reposiroty:
    https://hub.docker.com/repository/docker/cobraking1/repo4cobra/general
 
-5. to set a secret on Github, go to settings/Secrets and variables/Actions then click on the "New repository secret" button.  I chose my secrets as Docker_Password to store my Dockerhub password, Docker_Username to store my Dockerhub username, and Docker_Token to set my Dockerhub access token.
+6. to set a secret on Github, go to settings/Secrets and variables/Actions then click on the "New repository secret" button.  I chose my secrets as Docker_Password to store my Dockerhub password, Docker_Username to store my Dockerhub username, and Docker_Token to set my Dockerhub access token.
 
-6. This workflow named docker-workflow.ym,l uses my github secrets named DOCKER_USERNAME and DOCKER_TOKEN and uses it to access my dockerhub account and pushes my image nginx from this folder into dockerhub inside my image/reponame of cobraking1/repo4cobra.
+7. This workflow named docker-workflow.ym,l uses my github secrets named DOCKER_USERNAME and DOCKER_TOKEN and uses it to access my dockerhub account and pushes my image nginx from this folder into dockerhub inside my image/reponame of cobraking1/repo4cobra.
    
 the first step in my workflow is to use a docker/metadata-action@v4 to extract metadata from Git reference and Github events using the image of cobraking1/repo4cobra image I created from my dockerfile.
 
