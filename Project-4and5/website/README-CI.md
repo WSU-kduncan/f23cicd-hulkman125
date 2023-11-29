@@ -26,7 +26,7 @@ the correct phrase in the URL:
 
    Also to build a docker image I simply went to my wsl and typed down:
    
-         sudo docker build -t WSU-kduncan/f23cicd-hulkman125/github/workflows .
+         sudo docker build -t WSU-kduncan/f23cicd-hulkman125/Project-4and5/website .
 
 5. to run the container which I named CobraComicsWebSite, I type down the following code:
 
