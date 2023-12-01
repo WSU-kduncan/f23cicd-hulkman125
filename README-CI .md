@@ -77,7 +77,7 @@ the first step in my workflow is to use a docker/metadata-action@v4 to extract m
 
 the second step of the workflow is to use the docker/login-action@v3 command which uses my docker username and my access token to be able to login to docker.
 
-the third step uses the actions/checkout@v4 command which checks out my repository onto the runner, which will allow me to be able to run my scripts.
+the third step uses the actions/checkout@v4 command which checks out my repository onto the runner, which will allow me to be able to run my scripts and my actions.
 
 the fourth action uses the ls command which simply lists all of my files and folders in my main repository.
 
