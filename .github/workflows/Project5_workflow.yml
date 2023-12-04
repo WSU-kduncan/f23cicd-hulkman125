@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+       name: Docker meta
+       id: meta
+       uses: docker/metadata-action@v4
+       with:
+         images: |
+            cobraking1/repo4cobra    
+      -
         name: Checkout
         uses: actions/checkout@v3
       -
