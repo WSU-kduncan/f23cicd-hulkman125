@@ -1,0 +1,49 @@
+name: Project 5 Workflow
+
+on:
+  push:
+    tags:
+     -"v1.0.2"
+  branch:
+  workflow_dispatch:
+  
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: List contents
+        uses: actions/checkout@v3
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+      -
+        name: Set up Docker Buildx - optional
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Collecting tag info
+        uses: docker/metadata-action@v4
+        with: 
+           images: |
+             cobrking1/repo4cobra
+           tags: |
+            type=ref,event=branch
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/repo4cobra:latest
+            ${{steps.meta.outputs.tags }}
