@@ -76,4 +76,4 @@ My webhook file was originally called hooks.json and it was going to be on my ho
 
 it is designed to activate my script of  pull_restart.sh.
 
-5. To configure DockerHub to message a listener I clicked on my repo and clicked on the webhooks tab, I then gave my new webhook name of "viper", and gave it a new URL of "http://3.228.104.170:9000/hooks/webhook".
+5. To configure DockerHub to message a listener I went to my instance and in /etc/hooks.conf i added a trigger rule with a secret of "mysecret" which will be used by github webhooks to see use the configuration file if the event is used. I then went to my github repo and I then went to settings/webhook where I gave it a Payload URL of "http://3.228.104.170:9000/hooks/webhook". I then left it as a push event and clicked the "Update webhook" button sealing my webhook.
