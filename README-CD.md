@@ -1,3 +1,5 @@
+PART 1
+
 1.My goal is to push my tag changes into my Dockerhub repository. one of the the resources is to use the metadata to help us create a group of tags for a certain image. this is to keep changes of our image on Dockerhub. We do this so we can use them later such as if we need to use a newer tag that can work on an older image, that should work for us.
 
 
@@ -31,3 +33,47 @@ The sixth and final step uses a docker/build-push-action@v3 command to build and
 4. To prove that there is a tag in my github repo, here is a link to it:
 
     https://hub.docker.com/repository/docker/cobraking1/repo4cobra/tags?page=1&ordering=last_updated
+
+
+The Ip of the instance I use is 3.228.104.170
+
+PART 2
+
+1. To install docker on an instance you simply type down the following command of:
+    sudo apt-get update
+
+then I type down :
+
+
+    sudo apt install docker
+
+2. To pull my image from dockerhub i type down the following command:
+
+
+    sudo docker pull cobraking1/repo4cobra:latest
+
+To run a container I typed down the following:
+
+
+    sudo docker run -d -p 8282:5000 --name cobraComix_Website cobraking1/repo4cobra:latest
+
+But I created a restart script called pull_restart.sh that runs my docker container. And that script is on my /home/ubuntu folder on my instance.
+
+3. to install webhook on an instance i typed down:
+
+
+    sudo apt install webhook
+
+then type down:
+
+    go install github.com/adnanh/webhook@latest
+
+4. my webhook task definition file has an id of "CobraComix", and it has an execute-command that activates my pull_restart.sh script.
+
+My webhook file was originally called hooks.json and it was going to be on my home/ubuntu folder but I used the following command to copy it to a different folder of /etc/webhook.conf.:
+
+        sudo cp hooks.json /etc/webhook.conf
+
+it is designed to activate my script of  pull_restart.sh.
+
+5. To configure DockerHub to message a listener I clicked on my repo and clicked on the webhooks tab, I then gave my new webhook name of "viper", and gave it a new URL of "http://3.228.104.170:9000/hooks/webhook".
