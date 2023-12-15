@@ -38,6 +38,7 @@ The sixth and final step uses a docker/build-push-action@v3 command to build and
 The Ip of the instance I use is 3.228.104.170
 
 PART 2
+The goal here is to install docker on my instance and use it with my webhook configuration file and my script to allow other people to see my website online by typing down the IP address of my instance with :80. FYI I asked other people to look at my website and they were impressed as was I.
 
 1. To install docker on an instance you simply type down the following command of:
     sudo apt-get update
@@ -81,3 +82,6 @@ it is designed to activate my script of  pull_restart.sh.
 
 this is my image of my work for project 5:
       ![alt text](Project5Presentation.jpg)
+
+
+Have a pleasent day Professor Duncan, and Happy Holidays.
