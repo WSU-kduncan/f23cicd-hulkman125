@@ -80,4 +80,4 @@ it is designed to activate my script of  pull_restart.sh.
 
 
 this is my image of my work for project 5:
-      ![alt text](Project5Presentation.png)
+      ![alt text](Project5Presentation.jpg)
